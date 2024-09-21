@@ -1,0 +1,49 @@
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: toRem(20);
+  user-select: none;
+  .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: toRem(26);
+    width: toRem(26);
+    background: $background;
+    border-radius: 5px;
+    border: 1px solid $border;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: $secondary;
+  border-color: $primary;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  left: toRem(9);
+  top: toRem(5);
+  width: toRem(7);
+  height: toRem(11);
+  border: solid $primary;
+  border-width: 0 toRem(1) toRem(1) 0;
+  transform: rotate(45deg);
+}

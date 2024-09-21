@@ -1,0 +1,29 @@
+@mixin button-base {
+  display: block;
+  border-radius: $radius-sm;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border: none;
+  height: toRem(51);
+  font-size: toRem(16);
+  cursor: pointer;
+}
+
+@mixin center-fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin tablet-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-screen {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

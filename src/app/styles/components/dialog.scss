@@ -1,0 +1,81 @@
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: $background;
+  @media screen and (min-width: 768px) {
+    opacity: 0.8;
+  }
+}
+
+.dialog-content {
+  background-color: $background;
+  border-radius: $radius-base;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  padding: toRem(24);
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+  }
+  label {
+    display: block;
+    margin-bottom: toRem(8);
+  }
+  input {
+    display: block;
+    padding: toRem(16);
+    border: 1px solid $border;
+    font-size: toRem(16);
+    border-radius: $radius-sm;
+    width: 100%;
+    outline: none;
+    &::placeholder {
+      color: $muted-foreground;
+    }
+  }
+  .dialog-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(16);
+    button {
+      @include button-base();
+    }
+  }
+
+  p {
+    color: $muted-foreground;
+    line-height: toRem(24);
+  }
+
+  @include tablet-screen {
+    @include center-fixed;
+    width: toRem(450);
+    height: fit-content;
+    box-shadow: 0px 24px 48px -12px $shadow;
+
+    .dialog-buttons {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.dialog-content:focus {
+  outline: none;
+}
+
+.dialog-title {
+  font-weight: 500;
+  color: $foreground;
+  font-size: toRem(24);
+  font-weight: 500;
+  margin-bottom: toRem(32);
+}
+
+.dialog-description {
+  margin: toRem(10) 0 toRem(20);
+  color: var(--mauve-11);
+  font-size: toRem(15);
+  line-height: 1.5;
+}

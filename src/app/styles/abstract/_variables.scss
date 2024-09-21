@@ -1,0 +1,20 @@
+$background: hsla(0, 0%, 100%, 1);
+$foreground: hsla(0, 0%, 0%, 1);
+$text-white: hsla(0, 0%, 100%, 1);
+$muted: hsla(220, 73%, 95%, 1);
+$muted-foreground: hsla(0, 0%, 0%, 0.54);
+$destructive: hsla(0, 94%, 43%, 1);
+$primary: hsla(198, 94%, 43%, 1);
+$secondary: hsla(198, 82%, 79%, 1);
+$primary-foreground: hsla(0, 0%, 100%, 1);
+$border: hsla(220, 29%, 88%, 1);
+$radius-base: 1rem;
+$radius-sm: 0.5rem;
+$hover: hsla(220, 58%, 98%, 1);
+$shadow: hsla(221, 43%, 11%, 0.18);
+$primary-linear-gradient: linear-gradient(90deg, $primary 0%, #53c0f0 68.65%);
+$destructive-linear-gradient: linear-gradient(
+  90deg,
+  #d30707 0%,
+  #f05353 68.65%
+);

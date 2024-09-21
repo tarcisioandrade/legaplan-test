@@ -1,0 +1,17 @@
+.button-primary {
+  @include button-base();
+  color: $text-white;
+  background: $primary-linear-gradient;
+}
+
+.button-secondary {
+  @include button-base();
+  color: $foreground;
+  background: $muted;
+}
+
+.button-destructive {
+  @include button-base();
+  color: $text-white;
+  background: $destructive-linear-gradient;
+}
